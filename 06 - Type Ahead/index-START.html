@@ -23,6 +23,10 @@ fetch(endpoint)
   .then(blob => blob.json())
   .then(data => cities.push(...data)) // spread is part of ES6 
 
+console.log(cities);
+
+
+
 function findMatches(wordstomatch, cities) {
   return cities.filter(place => {
     const regex = new RegExp(wordstomatch, 'gi')
